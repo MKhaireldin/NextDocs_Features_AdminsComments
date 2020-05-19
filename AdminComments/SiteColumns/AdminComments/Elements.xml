@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
+  <Field
+       ID="{de160b9c-8568-4c9a-97f1-341b5994c36d}"
+       Name="AdminComments"
+       DisplayName="Admin Comments"
+       Type="Text"
+       Required="FALSE"
+       Group="NextDocs Columns"
+       ShowInDisplayForm="TRUE"
+       ShowInEditForm="TRUE">
+  </Field>
+</Elements>

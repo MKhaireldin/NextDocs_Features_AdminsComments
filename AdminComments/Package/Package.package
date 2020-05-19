@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="c9b8c4c1-92e7-4dc2-845a-770fcc691908" solutionId="c9b8c4c1-92e7-4dc2-845a-770fcc691908" resetWebServer="false" sharePointProductVersion="16.0" name="AdminComments" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="127a6558-8fab-49b5-a503-7a66e67a4560" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="a602b190-76d2-4545-9ce2-817cf78a160c" />
+    <projectItemReference itemId="47183599-f944-47dd-9789-d1d2941b358e" />
+  </projectItems>
+</package>

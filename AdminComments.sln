@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminComments", "AdminComments\AdminComments.csproj", "{6E0CEA61-6E30-4B5D-90C1-E4A83C31FC01}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E0CEA61-6E30-4B5D-90C1-E4A83C31FC01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E0CEA61-6E30-4B5D-90C1-E4A83C31FC01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E0CEA61-6E30-4B5D-90C1-E4A83C31FC01}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6E0CEA61-6E30-4B5D-90C1-E4A83C31FC01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E0CEA61-6E30-4B5D-90C1-E4A83C31FC01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E0CEA61-6E30-4B5D-90C1-E4A83C31FC01}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4652FE9-2521-4613-BDE6-43F3FD724294}
+	EndGlobalSection
+EndGlobal

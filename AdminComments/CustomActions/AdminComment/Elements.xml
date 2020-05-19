@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction
+    Id="Ribbon.Library.Actions.AddAButton"
+    Location="CommandUI.Ribbon"
+    RegistrationId="101"
+    RegistrationType="List"
+    Title="Admin Comment">
+    <CommandUIExtension>
+      <CommandUIDefinitions>
+        <CommandUIDefinition
+          Location="Ribbon.Documents.Manage.Controls._children">
+          <Button Id="Ribbon.Documents.Manage.AdminComment"
+            Command="AdminCommentCommand"
+            Image32by32="_layouts/15/Images/AdminComments/AdminComment32x32.png"
+            Image16by16="_layouts/15/Images/AdminComments/AdminComment32x32.png"
+            LabelText="Admin Comment"
+            TemplateAlias="o1" />
+        </CommandUIDefinition>
+      </CommandUIDefinitions>
+      <CommandUIHandlers>
+        <CommandUIHandler
+          Command="AdminCommentCommand"
+          CommandAction="javascript:OpenPopUpPage();
+                                                function OpenPopUpPage() {
+                                                    var selectedIds ='';
+                                                    var ctx = SP.ClientContext.get_current();
+                                                    var listID = SP.ListOperation.Selection.getSelectedList();
+                                                    var items = SP.ListOperation.Selection.getSelectedItems(ctx);
+                                                    items.forEach(function(item, i)
+                                                    {                                                       
+                                                        if(i == 0)
+                                                        {
+                                                          selectedIds += item.id;                                                                                                          
+                                                        }
+                                                        else
+                                                        {
+                                                          selectedIds += ',' + item.id;
+                                                        }
+                                                    });  
+                                                    
+                                                    var url=
+                                                    SP.UI.ModalDialog.OpenPopUpPage(ctx.get_url() +'/_layouts/15/AdminComments/AdminComments.aspx?Ids=' +selectedIds + '&amp;listID='+listID);
+                                                }"
+          EnabledScript="javascript:SP.ListOperation.Selection.getSelectedItems().length > 0;"/>
+      </CommandUIHandlers>
+    </CommandUIExtension>
+  </CustomAction>
+</Elements>
