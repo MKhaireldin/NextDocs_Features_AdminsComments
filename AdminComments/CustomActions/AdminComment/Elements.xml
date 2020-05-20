@@ -38,8 +38,7 @@
                                                           selectedIds += ',' + item.id;
                                                         }
                                                     });  
-                                                    
-                                                    var url=
+                                                                                                        
                                                     SP.UI.ModalDialog.OpenPopUpPage(ctx.get_url() +'/_layouts/15/AdminComments/AdminComments.aspx?Ids=' +selectedIds + '&amp;listID='+listID);
                                                 }"
           EnabledScript="javascript:SP.ListOperation.Selection.getSelectedItems().length > 0;"/>

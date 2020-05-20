@@ -6,6 +6,7 @@
 <%@ Import Namespace="Microsoft.SharePoint" %>
 <%@ Assembly Name="Microsoft.Web.CommandUI, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminComments.aspx.cs" Inherits="AdminComments.Layouts.AdminComments.AdminComments" DynamicMasterPageFile="~masterurl/default.master" %>
+
 <asp:Content ID="PageHead" ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="server">
     
 </asp:Content>
@@ -46,8 +47,8 @@
             });
         }
         function onQuerySucceeded() {
+            window.location.replace("https://www.google.com/");
             closePopUp();
-            location.reload(true);
         }
         function onQueryFailed(sender, args) {
             alert('Request failed. ' + args.get_message() + '\n' + args.get_stackTrace());
