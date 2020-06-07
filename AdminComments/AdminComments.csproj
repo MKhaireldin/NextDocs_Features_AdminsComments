@@ -16,6 +16,7 @@
     <MinimumOfficeToolsVersion>14.0</MinimumOfficeToolsVersion>
     <SandboxedSolution>False</SandboxedSolution>
     <ActiveDeploymentConfiguration>Default</ActiveDeploymentConfiguration>
+    <TokenReplacementFileExtensions>svc</TokenReplacementFileExtensions>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,6 +48,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
@@ -56,6 +60,10 @@
   <ItemGroup>
     <Compile Include="Features\AdminCommentsFeature\AdminCommentsFeature.EventReceiver.cs">
       <DependentUpon>AdminCommentsFeature.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ISAPI\ISystemUpdateService.cs" />
+    <Compile Include="ISAPI\SystemUpdateService.svc.cs">
+      <DependentUpon>SystemUpdateService.svc</DependentUpon>
     </Compile>
     <Compile Include="Layouts\AdminComments\AdminComments.aspx.cs">
       <DependentUpon>AdminComments.aspx</DependentUpon>
@@ -67,6 +75,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ISAPI\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0fd24f6a-90b4-4e00-bf24-59454e107780}</SharePointProjectItemId>
+    </None>
     <None Include="SiteColumns\AdminComments\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{3f77b06c-7335-4cae-9410-e342e9234584}</SharePointProjectItemId>
     </None>
@@ -92,6 +103,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="ISAPI\SystemUpdateService.svc" />
     <Content Include="SiteColumns\AdminComments\Elements.xml" />
     <Content Include="CustomActions\AdminComment\Elements.xml" />
     <Content Include="Features\AdminCommentsFeature\AdminCommentsFeature.Template.xml">

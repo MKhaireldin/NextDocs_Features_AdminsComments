@@ -21,28 +21,13 @@
       <CommandUIHandlers>
         <CommandUIHandler
           Command="AdminCommentCommand"
-          CommandAction="javascript:OpenPopUpPage();
-                                                function OpenPopUpPage() {
-                                                    var selectedIds ='';
-                                                    var ctx = SP.ClientContext.get_current();
-                                                    var listID = SP.ListOperation.Selection.getSelectedList();
-                                                    var items = SP.ListOperation.Selection.getSelectedItems(ctx);
-                                                    items.forEach(function(item, i)
-                                                    {                                                       
-                                                        if(i == 0)
-                                                        {
-                                                          selectedIds += item.id;                                                                                                          
-                                                        }
-                                                        else
-                                                        {
-                                                          selectedIds += ',' + item.id;
-                                                        }
-                                                    });  
-                                                                                                        
-                                                    SP.UI.ModalDialog.OpenPopUpPage(ctx.get_url() +'/_layouts/15/AdminComments/AdminComments.aspx?Ids=' +selectedIds + '&amp;listID='+listID);
-                                                }"
-          EnabledScript="javascript:SP.ListOperation.Selection.getSelectedItems().length > 0;"/>
+          CommandAction="javascript:OpenAdminCommentsPopUp();"
+          EnabledScript="javascript:EnableCommentsButton();"/>
       </CommandUIHandlers>
     </CommandUIExtension>
   </CustomAction>
+
+  <CustomAction Id="Ribbon.Library.Actions.Scripts"
+                Location="ScriptLink"
+                ScriptSrc="/_layouts/15/AdminComments/AdminCommentsJS.js" />
 </Elements>

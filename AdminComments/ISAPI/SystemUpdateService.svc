@@ -1,0 +1,6 @@
+﻿<%@ ServiceHost Language="C#" Debug="true"
+    Service="AdminComments.ISAPI.SystemUpdateService, AdminComments, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e329ee010310cb35"
+    CodeBehind="SystemUpdateService.svc.cs"
+    Factory="Microsoft.SharePoint.Client.Services.MultipleBaseAddressWebServiceHostFactory,
+    Microsoft.SharePoint.Client.ServerRuntime, Version=15.0.0.0, Culture=neutral,
+    PublicKeyToken=71e9bce111e9429c" %>
