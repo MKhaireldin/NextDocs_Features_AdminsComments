@@ -28,6 +28,7 @@ namespace AdminComments.Features.AdminCommentsFeature
 			var x = 10;
 			var y = 10;
 			var z = x + y;
+			var a = z +20;
         }
 
 
