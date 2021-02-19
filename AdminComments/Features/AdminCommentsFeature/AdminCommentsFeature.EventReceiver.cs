@@ -26,6 +26,7 @@ namespace AdminComments.Features.AdminCommentsFeature
             cType.FieldLinks.Add(sPFieldLink);
             cType.Update(true, false);
 			var x = 10;
+			var y = 10;
         }
 
 
