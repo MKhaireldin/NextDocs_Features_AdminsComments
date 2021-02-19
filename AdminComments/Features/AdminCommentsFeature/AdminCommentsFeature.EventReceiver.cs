@@ -27,6 +27,7 @@ namespace AdminComments.Features.AdminCommentsFeature
             cType.Update(true, false);
 			var x = 10;
 			var y = 10;
+			var z = x + y;
         }
 
 
